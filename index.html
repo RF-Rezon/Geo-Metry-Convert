@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <title>Project start</title>
+    <link rel="icon" type="image/x-icon" href="/images/icons8-formula-fx-96.png" />
+  </head>
+  <body>
+    <main class="container mx-auto max-w-9xl">
+      <div class="flex mt-5 bg-indigo-300 items-center rounded-md">
+        <div class="flex-1 ml-6 py-5">
+          <p class="text-2xl font-semibold text-black">Interactive</p>
+          <p class="text-xl font-normal text-slate-200">Geometry Genius</p>
+        </div>
+        <div>
+          <a href="./sceond_page.html" target="_blank">
+            <button
+              type="button"
+              class="px-6 py-2.5 mr-6 text-white bg-blue-400 font-medium text-xs rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+            >
+              Blog
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- New Img Section -->
+
+      <div class="lg:flex justify-center">
+        <div class="basis-3/4">
+          <div class="my-8 grid lg:grid-cols-3 gap-2">
+            <div class="flex justify-center text-center m-4">
+              <div name="kalar" class="rounded-lg shadow-lg bg-white max-w-sm">
+                <div class="flex justify-center items-center">
+                  <img class="my-3 p-2" src="./images/triangle.png" alt="" />
+                </div>
+                <div class="p-6">
+                  <h5 id="triName" class="text-gray-900 text-xl font-bold mb-2">Triangle</h5>
+                  <p class="text-gray-700 text-base mb-4">Area (A) = 0.5 &#10005; b &#10005; h</p>
+                  <div class="flex pb-5 justify-center">
+                    <div class="flex items-center space-x-2 justify-center">
+                      <input id="triWidth" type="number" class="bg-slate-100 px-4 w-1/2" placeholder="b" />
+                      <p>cm</p>
+                    </div>
+                    <div class="flex items-center space-x-2 justify-center">
+                      <input id="triLength" type="number" class="bg-slate-100 px-4 w-1/2" placeholder="h" />
+                      <p>cm</p>
+                    </div>
+                  </div>
+                  <a href="#">
+                    <button
+                      id="btnTri"
+                      type="button"
+                      class="inline-block px-24 py-2.5 mt-4 bg-blue-400 text-white font-semibold text-base leading-tight rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                    >
+                      Calculate
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center text-center m-4">
+              <div name="kalar" class="rounded-lg shadow-lg bg-white max-w-sm">
+                <div class="flex justify-center items-center">
+                  <img class="my-3 p-5" src="./images/rectangle.png" alt="" />
+                </div>
+                <div class="p-6">
+                  <h5 id="recName" class="text-gray-900 text-xl font-bold mb-2">Rectangle</h5>
+                  <p class="text-gray-700 text-base mb-4">Area (A) = w &#10005; I</p>
+                  <div class="flex pb-5 justify-center">
+                    <div class="flex items-center space-x-2 justify-center">
+                      <input id="recWidth" type="number" class="bg-slate-100 px-4 w-1/2" placeholder="w" />
+                      <p>cm</p>
+                    </div>
+                    <div class="flex items-center space-x-2 justify-center">
+                      <input id="recLength" type="number" class="bg-slate-100 px-4 w-1/2" placeholder="l" />
+                      <p>cm</p>
+                    </div>
+                  </div>
+                  <a href="#">
+                    <button
+                      id="btnRec"
+                      type="button"
+                      class="inline-block px-24 py-2.5 mt-4 bg-blue-400 text-white font-semibold text-base leading-tight rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                    >
+                      Calculate
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center text-center m-4">
+              <div name="kalar" class="rounded-lg shadow-lg bg-white max-w-sm">
+                <div class="flex justify-center items-center">
+                  <img class="my-3 mt-8 p-5" src="./images/parallelogram.png" alt="" />
+                </div>
+                <div class="p-6">
+                  <h5 id="paraName" class="text-gray-900 text-xl font-bold mb-2">Parallelogram</h5>
+                  <p class="text-gray-700 text-base mb-4">Area (A) = b &#10005; h</p>
+                  <div class="flex pb-5 justify-center">
+                    <div class="flex items-center space-x-2 justify-center">
+                      <input id="paraWidth" type="number" class="bg-slate-100 px-4 w-1/2" placeholder="b" />
+                      <p>cm</p>
+                    </div>
+                    <div class="flex items-center space-x-2 justify-center">
+                      <input id="paraLength" type="number" class="bg-slate-100 px-4 w-1/2" placeholder="h" />
+                      <p>cm</p>
+                    </div>
+                  </div>
+                  <a href="#">
+                    <button
+                      id="btnPara"
+                      type="button"
+                      class="inline-block px-24 py-2.5 mt-4 bg-blue-400 text-white font-semibold text-base leading-tight rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                    >
+                      Calculate
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-center text-center m-4">
+              <div name="kalar" class="rounded-lg shadow-lg bg-white max-w-sm">
+                <div class="flex justify-center items-center">
+                  <img class="my-3" src="./images/rhombus.png" alt="" />
+                </div>
+                <div class="p-6">
+                  <h5 id="rhombusName" class="text-gray-900 text-xl font-bold mb-2">Rhombbus</h5>
+                  <p class="text-gray-700 text-base mb-4">
+                    Area (A) = 0.5 &#10005; d<sub>1</sub> &#10005; d<sub>2</sub>
+                  </p>
+                  <div class="flex pb-5 justify-center">
+                    <div class="flex items-center space-x-2 justify-center">
+                      <input id="rhombusWidth" type="number" class="bg-slate-100 px-4 w-1/2" placeholder="d1" />
+                      <p>cm</p>
+                    </div>
+                    <div class="flex items-center space-x-2 justify-center">
+                      <input id="rhombusLength" type="number" class="bg-slate-100 px-4 w-1/2" placeholder="d2" />
+                      <p>cm</p>
+                    </div>
+                  </div>
+                  <a href="#">
+                    <button
+                      id="btnRhombus"
+                      type="button"
+                      class="inline-block px-24 py-2.5 mt-4 bg-blue-400 text-white font-semibold text-base leading-tight rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                    >
+                      Calculate
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center text-center m-4">
+              <div name="kalar" class="rounded-lg shadow-lg bg-white max-w-sm">
+                <div class="flex justify-center items-center">
+                  <img class="my-3 mt-4" src="./images/pentagon.png" alt="" />
+                </div>
+                <div class="p-6">
+                  <h5 id="pantaName" class="text-gray-900 text-xl font-bold mb-2">Pentagon</h5>
+                  <p class="text-gray-700 text-base mb-4">Area (A) = 0.5 &#10005; p &#10005; b</p>
+                  <div class="flex pb-5 justify-center">
+                    <div class="flex items-center space-x-2 justify-center">
+                      <input id="pantaWidth" type="number" class="bg-slate-100 px-4 w-1/2" placeholder="p" />
+                      <p>cm</p>
+                    </div>
+                    <div class="flex items-center space-x-2 justify-center">
+                      <input id="pantaLength" type="number" class="bg-slate-100 px-4 w-1/2" placeholder="b" />
+                      <p>cm</p>
+                    </div>
+                  </div>
+                  <a href="#">
+                    <button
+                      id="btnPanta"
+                      type="button"
+                      class="inline-block px-24 py-2.5 mt-4 bg-blue-400 text-white font-semibold text-base leading-tight rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                    >
+                      Calculate
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center text-center m-4">
+              <div name="kalar" class="rounded-lg shadow-lg bg-white max-w-sm">
+                <div class="flex justify-center items-center">
+                  <img class="my-3 mt-6" src="./images/ellipse.png" alt="" />
+                </div>
+                <div class="p-6">
+                  <h5 id="elliName" class="text-gray-900 text-xl font-bold mb-2">Ellipse</h5>
+                  <p class="text-gray-700 text-base mb-4">Area (A) = &#960;ab</p>
+                  <div class="flex pb-5 justify-center">
+                    <div class="flex items-center space-x-2 justify-center">
+                      <input id="elliWidth" type="number" class="bg-slate-100 px-4 w-1/2" placeholder="a" />
+                      <p>cm</p>
+                    </div>
+                    <div class="flex items-center space-x-2 justify-center">
+                      <input id="elliLength" type="number" class="bg-slate-100 px-4 w-1/2" placeholder="b" />
+                      <p>cm</p>
+                    </div>
+                  </div>
+                  <a href="#">
+                    <button
+                      id="btnElli"
+                      type="button"
+                      class="inline-block px-24 py-2.5 mt-4 bg-blue-400 text-white font-semibold text-base leading-tight rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                    >
+                      Calculate
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="grow my-8 text-left p-7 m-4 rounded-lg shadow-lg border-blue-600 lg:w-1/3 self-center lg:self-start"
+        >
+          <p class="underline font-semibold text-lg">Area Calculation</p>
+          <br />
+          <p id="sideTextArea" class="font-semibold text-lg w-full"></p>
+          <p class="text-red-600 text-xl font-bold" id="p01"></p>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
